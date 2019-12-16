@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="navbar navbar-dark bg-dark titulo">
+        Minha Check List
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Tarefa</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+                    aria-describedby="inputGroup-sizing-lg" id="mensagem">
+                <button type="button" class="btn btn-success ml-3" onclick="tarefa();">Success</button>
+            </div>
+        </div>
+    </div>
+
+    <table class="mt-3 table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Check</th>
+                <th scope="col">Tarefa</th>
+                <th scope="col">#</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela">
+
+        </tbody>
+    </table>
+    <!-- Para cada elemento do vetor, exiba! -->
+    <div *ngFor='let tarefa of minhaTarefa'>
+
+        <div class="row mt-5 tabela">
+            <div class="col-md-2">
+            </div>
+
+            <div class="col-md-8">
+                <h3>Tarefa: {{tarefa.nome}}</h3>
+                <p>Responsavel: {{tarefa.responsavel}}</p>
+            </div>
+
+            <div class="col-md-2">
+            </div>
+        </div>
+
+    </div>
+</div>
