@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col mx-3">
+            <h3>id</h3>
+            <hr>
+        </div>
+        <div class="col mx-3">
+            <h3>Users</h3>
+            <hr>
+        </div>
+
+        <div class="col mx-3">
+            <h3>Address</h3>
+            <hr>
+        </div>
+
+        <div class="col mx-3">
+            <h3>Company</h3>
+            <hr>
+        </div>
+
+    </div>
+    <div *ngFor='let user of usuarios'>
+
+        <div class="row">
+            <div class="col mx-3"> {{user.id}}</div>
+
+            <div class="col mx-3"> {{user.name}}</div>
+
+            <div class="col mx-3">{{user.address.street}}</div>
+
+            <div class="col mx-3">{{user.company.name}}</div>
+        </div>
+
+    </div>
+</div>

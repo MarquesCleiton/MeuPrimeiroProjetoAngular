@@ -4,12 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ListawebService {
+export class UserService {
 
   //injeção de depêndencia
   constructor(private http: HttpClient) { }
-
-  public obterTarefas(): any {
-    return this.http.get("http://www.professorisidro.com.br/tarefas.php");
+  public obterUsuarios(): any {
+    return this.http.get("https://jsonplaceholder.typicode.com/users");
   }
 }
