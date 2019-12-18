@@ -9,6 +9,7 @@ import { UserService } from '../service/user.service'
 })
 export class ListaComponent implements OnInit {
   usuarios: User[];
+  
   constructor(private lista: UserService) { }
 
   ngOnInit() {
@@ -16,11 +17,14 @@ export class ListaComponent implements OnInit {
   }
 
   public obterUsuarios() {
+    
     this.lista.obterUsuarios().subscribe((resultado: User[]) => {
       console.log(resultado);
       this.usuarios = resultado;
       console.log(this.usuarios)
     });
+
+
   }
 
 }

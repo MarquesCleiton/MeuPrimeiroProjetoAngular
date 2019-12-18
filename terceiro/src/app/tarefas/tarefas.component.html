@@ -1,0 +1,38 @@
+<div class="row mb-3">
+    <div class="col">
+        <input type="number" [(ngModel)]="idBusca">
+        <button (click)='obterListaCompleta()'>Pesquisar</button><br>
+        <strong>digite 0 para exibir a lista completa!</strong>
+    </div>
+    
+</div>
+
+<div class="row mb-3">
+    <div class="col mx-3"> User ID</div>
+    <div class="col mx-3"> ID </div>
+    <div class="col mx-3"> Title</div>
+    <div class="col mx-3"> Completed ?</div>
+</div>
+
+<div *ngIf="isLista == true">
+    <div *ngFor='let tarefa of listaTarefas'>
+        <div class="row">
+            <div class="col mx-3"> {{tarefa.userId}}</div>
+            <div class="col mx-3"> {{tarefa.id}}</div>
+            <div class="col mx-3"> {{tarefa.title}}</div>
+            <div class="col mx-3"> {{tarefa.completed}}</div>
+        </div>
+
+        <hr>
+    </div>
+</div>
+
+    <div *ngIf="isLista == false">
+            <div class="row">
+                <div class="col mx-3"> {{tarefa.userId}}</div>
+                <div class="col mx-3"> {{tarefa.id}}</div>
+                <div class="col mx-3"> {{tarefa.title}}</div>
+                <div class="col mx-3"> {{tarefa.completed}}</div>
+        </div>
+
+    </div>
